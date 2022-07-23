@@ -113,7 +113,8 @@ public class CSVMapper {
     headerLine.add("IssueRuleDescription");
     headerLine.add("CWEId");
     headerLine.add("IssueSeverity");
-    headerLine.append("IssueFullPath");
+    headerLine.add("IssueFullPath");
+    headerLine.append("Method");
 
     return headerLine.toString();
   }

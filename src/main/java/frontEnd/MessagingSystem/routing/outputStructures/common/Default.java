@@ -188,6 +188,7 @@ public class Default {
     issue.setRuleDesc(oldIssue.getRule().getDesc());
     issue.setCWEId(oldIssue.getRule().getCweId()[0]);
     issue.setDescription(oldIssue.getRule().getDesc());
+    issue.setLocation(loc);
 
     issue.setSeverity("1");
 

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * @author franceme
  * @version 03.07.01
  */
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonPropertyOrder({
   "-FullPath",
   "-Id",
@@ -353,7 +353,7 @@ public class Issue implements Serializable {
   }
 
   /**
-   * LocationType
+   * (Required)
    *
    * @return a {@link frontEnd.MessagingSystem.routing.structure.Default.Location} object.
    */
@@ -363,7 +363,7 @@ public class Issue implements Serializable {
   }
 
   /**
-   * LocationType
+   * (Required)
    *
    * @param location a {@link frontEnd.MessagingSystem.routing.structure.Default.Location} object.
    */
@@ -378,6 +378,7 @@ public class Issue implements Serializable {
    * @param location a {@link frontEnd.MessagingSystem.routing.structure.Default.Location} object.
    * @return a {@link frontEnd.MessagingSystem.routing.structure.Default.Issue} object.
    */
+  @JacksonXmlProperty(isAttribute = true, localName = "Location")
   public Issue withLocation(Location location) {
     this.location = location;
     return this;

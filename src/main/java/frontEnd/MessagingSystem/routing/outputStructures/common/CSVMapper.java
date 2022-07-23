@@ -133,7 +133,8 @@ public class CSVMapper {
     issueLine.add(issue.getRule().getDesc());
     issueLine.add(issue.getRule().getCweId()[0]);
     issueLine.add(1);
-    issueLine.append(issue.getFullPathName());
+    issueLine.add(issue.getFullPathName());
+    issueLine.append(issue.getMethods().peek().toString());
 
     return issueLine.toString();
   }
